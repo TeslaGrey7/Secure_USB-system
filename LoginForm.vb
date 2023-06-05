@@ -54,7 +54,9 @@ Public Class LoginForm
 
     Private Sub LoginForm_Activated(sender As Object, e As EventArgs) Handles MyBase.Load
         checkUserSettings()
-        BlockUSBPort()
+        ' hereeee
+        '  BlockUSBPort()
+        UnblockUSBPort()
     End Sub
 
     Private Sub UnblockUSBPort()
