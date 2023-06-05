@@ -39,6 +39,7 @@ Partial Class Dashboard
         Label9 = New Label()
         pincodeInput = New TextBox()
         enabledInput = New CheckBox()
+        authenticationBackgroundWorker = New ComponentModel.BackgroundWorker()
         SuspendLayout()
         ' 
         ' credentialsLabel
@@ -185,6 +186,9 @@ Partial Class Dashboard
         enabledInput.Text = "Enabled"
         enabledInput.UseVisualStyleBackColor = True
         ' 
+        ' authenticationBackgroundWorker
+        ' 
+        ' 
         ' Dashboard
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
@@ -229,4 +233,5 @@ Partial Class Dashboard
     Friend WithEvents Label9 As Label
     Friend WithEvents pincodeInput As TextBox
     Friend WithEvents enabledInput As CheckBox
+    Friend WithEvents authenticationBackgroundWorker As System.ComponentModel.BackgroundWorker
 End Class

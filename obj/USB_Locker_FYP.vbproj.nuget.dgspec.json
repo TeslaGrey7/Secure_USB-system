@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Rk Muthuram\\Desktop\\USB_Locker_FYP\\USB_Locker_FYP.vbproj": {}
+    "F:\\sunrisers\\Secure_USB-system\\USB_Locker_FYP.vbproj": {}
   },
   "projects": {
-    "C:\\Users\\Rk Muthuram\\Desktop\\USB_Locker_FYP\\USB_Locker_FYP.vbproj": {
+    "F:\\sunrisers\\Secure_USB-system\\USB_Locker_FYP.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rk Muthuram\\Desktop\\USB_Locker_FYP\\USB_Locker_FYP.vbproj",
+        "projectUniqueName": "F:\\sunrisers\\Secure_USB-system\\USB_Locker_FYP.vbproj",
         "projectName": "USB_Locker_FYP",
-        "projectPath": "C:\\Users\\Rk Muthuram\\Desktop\\USB_Locker_FYP\\USB_Locker_FYP.vbproj",
+        "projectPath": "F:\\sunrisers\\Secure_USB-system\\USB_Locker_FYP.vbproj",
         "packagesPath": "C:\\Users\\Rk Muthuram\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rk Muthuram\\Desktop\\USB_Locker_FYP\\obj\\",
+        "outputPath": "F:\\sunrisers\\Secure_USB-system\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Rk Muthuram\\AppData\\Roaming\\NuGet\\NuGet.Config",

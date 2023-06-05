@@ -31,6 +31,8 @@ Partial Class LoginForm
         masterLoginLabel = New Label()
         logoPicture = New PictureBox()
         loginStatusText = New Label()
+        statusText = New Label()
+        backgroundWorker1 = New ComponentModel.BackgroundWorker()
         CType(logoPicture, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -78,7 +80,7 @@ Partial Class LoginForm
         ' masterLoginLabel
         ' 
         masterLoginLabel.AutoSize = True
-        masterLoginLabel.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point)
+        masterLoginLabel.Font = New Font("Segoe UI", 14.0F, FontStyle.Bold, GraphicsUnit.Point)
         masterLoginLabel.Location = New Point(480, 53)
         masterLoginLabel.Name = "masterLoginLabel"
         masterLoginLabel.Size = New Size(189, 38)
@@ -98,7 +100,7 @@ Partial Class LoginForm
         ' loginStatusText
         ' 
         loginStatusText.AutoSize = True
-        loginStatusText.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        loginStatusText.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
         loginStatusText.ForeColor = Color.Red
         loginStatusText.Location = New Point(570, 216)
         loginStatusText.Name = "loginStatusText"
@@ -106,11 +108,22 @@ Partial Class LoginForm
         loginStatusText.TabIndex = 7
         loginStatusText.TextAlign = ContentAlignment.MiddleCenter
         ' 
+        ' statusText
+        ' 
+        statusText.AutoSize = True
+        statusText.Font = New Font("Segoe UI", 14.0F, FontStyle.Bold, GraphicsUnit.Point)
+        statusText.ForeColor = SystemColors.Highlight
+        statusText.Location = New Point(25, 327)
+        statusText.Name = "statusText"
+        statusText.Size = New Size(0, 38)
+        statusText.TabIndex = 8
+        ' 
         ' LoginForm
         ' 
-        AutoScaleDimensions = New SizeF(10F, 25F)
+        AutoScaleDimensions = New SizeF(10.0F, 25.0F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
+        Controls.Add(statusText)
         Controls.Add(loginStatusText)
         Controls.Add(logoPicture)
         Controls.Add(masterLoginLabel)
@@ -135,4 +148,6 @@ Partial Class LoginForm
     Friend WithEvents masterLoginLabel As Label
     Friend WithEvents logoPicture As PictureBox
     Friend WithEvents loginStatusText As Label
+    Friend WithEvents statusText As Label
+    Friend WithEvents backgroundWorker1 As System.ComponentModel.BackgroundWorker
 End Class

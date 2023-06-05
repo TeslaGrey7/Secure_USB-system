@@ -20,13 +20,18 @@
         Dim password As String = passwordInput.Text()
         Dim pincode As String = pincodeInput.Text()
         Dim enabled As Boolean = enabledInput.Checked()
-        My.Settings.username = username
-        My.Settings.password = password
-        My.Settings.pincode = pincode
-        My.Settings.enabled = enabled
-        My.Settings.Save()
-        MessageBox.Show("Settings saved!")
-        getUserSettings()
+        If enabled = True And Strings.Trim(pincode).Length() < 1 Then
+            MessageBox.Show("Pincode cannot be empty if Authentication enabled!")
+        Else
+            My.Settings.username = username
+            My.Settings.password = password
+            My.Settings.pincode = pincode
+            My.Settings.enabled = enabled
+            My.Settings.Save()
+            MessageBox.Show("Settings saved!")
+            getUserSettings()
+        End If
+
     End Sub
 
     Private Sub saveSettingsAndExit(sender As Object, e As EventArgs) Handles saveSettings.Click
@@ -34,7 +39,29 @@
     End Sub
 
     Private Sub exitOnly(sender As Object, e As EventArgs) Handles exitBtn.Click
+        Dim LoginForm As New LoginForm
+        LoginForm.Show()
         Me.Close()
     End Sub
 
+    Private Sub checkAuth(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles authenticationBackgroundWorker.DoWork
+
+        Dim pincode As String = My.Settings.pincode
+        Dim enabled As Boolean = My.Settings.enabled
+
+        If enabled = True And pincode.Length() > 0 Then
+            MessageBox.Show("hello im here")
+        End If
+    End Sub
+
+    Private Sub checkAuth2(sender As Object, e As System.ComponentModel.ProgressChangedEventArgs) Handles authenticationBackgroundWorker.ProgressChanged
+        Dim pincode As String = My.Settings.pincode
+        Dim enabled As Boolean = My.Settings.enabled
+
+        If enabled = True And pincode.Length() > 0 Then
+            MessageBox.Show("hello im here")
+        End If
+
+
+    End Sub
 End Class

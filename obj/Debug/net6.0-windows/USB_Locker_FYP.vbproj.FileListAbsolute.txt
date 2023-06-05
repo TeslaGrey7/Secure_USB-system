@@ -18,3 +18,24 @@ C:\Users\Rk Muthuram\Desktop\USB_Locker_FYP\obj\Debug\net6.0-windows\USB_Locker_
 C:\Users\Rk Muthuram\Desktop\USB_Locker_FYP\obj\Debug\net6.0-windows\USB_Locker_FYP.genruntimeconfig.cache
 C:\Users\Rk Muthuram\Desktop\USB_Locker_FYP\obj\Debug\net6.0-windows\ref\USB_Locker_FYP.dll
 C:\Users\Rk Muthuram\Desktop\USB_Locker_FYP\bin\Debug\net6.0-windows\USB_Locker_FYP.dll.config
+F:\sunrisers\Secure_USB-system\bin\Debug\net6.0-windows\USB_Locker_FYP.exe
+F:\sunrisers\Secure_USB-system\bin\Debug\net6.0-windows\USB_Locker_FYP.dll.config
+F:\sunrisers\Secure_USB-system\bin\Debug\net6.0-windows\USB_Locker_FYP.deps.json
+F:\sunrisers\Secure_USB-system\bin\Debug\net6.0-windows\USB_Locker_FYP.runtimeconfig.json
+F:\sunrisers\Secure_USB-system\bin\Debug\net6.0-windows\USB_Locker_FYP.dll
+F:\sunrisers\Secure_USB-system\bin\Debug\net6.0-windows\USB_Locker_FYP.pdb
+F:\sunrisers\Secure_USB-system\obj\Debug\net6.0-windows\USB_Locker_FYP.vbproj.AssemblyReference.cache
+F:\sunrisers\Secure_USB-system\obj\Debug\net6.0-windows\USB_Locker_FYP.Dashboard.resources
+F:\sunrisers\Secure_USB-system\obj\Debug\net6.0-windows\USB_Locker_FYP.LoginForm.resources
+F:\sunrisers\Secure_USB-system\obj\Debug\net6.0-windows\USB_Locker_FYP.Resources.resources
+F:\sunrisers\Secure_USB-system\obj\Debug\net6.0-windows\USB_Locker_FYP.vbproj.GenerateResource.cache
+F:\sunrisers\Secure_USB-system\obj\Debug\net6.0-windows\USB_Locker_FYP.GeneratedMSBuildEditorConfig.editorconfig
+F:\sunrisers\Secure_USB-system\obj\Debug\net6.0-windows\USB_Locker_FYP.AssemblyInfoInputs.cache
+F:\sunrisers\Secure_USB-system\obj\Debug\net6.0-windows\USB_Locker_FYP.AssemblyInfo.vb
+F:\sunrisers\Secure_USB-system\obj\Debug\net6.0-windows\USB_Locker_FYP.vbproj.CoreCompileInputs.cache
+F:\sunrisers\Secure_USB-system\obj\Debug\net6.0-windows\USB_Locker_FYP.dll
+F:\sunrisers\Secure_USB-system\obj\Debug\net6.0-windows\refint\USB_Locker_FYP.dll
+F:\sunrisers\Secure_USB-system\obj\Debug\net6.0-windows\USB_Locker_FYP.pdb
+F:\sunrisers\Secure_USB-system\obj\Debug\net6.0-windows\USB_Locker_FYP.genruntimeconfig.cache
+F:\sunrisers\Secure_USB-system\obj\Debug\net6.0-windows\ref\USB_Locker_FYP.dll
+F:\sunrisers\Secure_USB-system\obj\Debug\net6.0-windows\USB_Locker_FYP.Authentication.resources
