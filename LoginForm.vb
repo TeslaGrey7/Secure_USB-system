@@ -34,21 +34,22 @@ Public Class LoginForm
     End Enum
 
     Protected Overrides Sub WndProc(ByRef m As System.Windows.Forms.Message)
+        Dim enabled As Boolean = My.Settings.enabled
+        If enabled = True Then
+            If m.Msg = WM_DEVICECHANGE Then
 
-        If m.Msg = WM_DEVICECHANGE Then
+                Select Case m.WParam
+                    Case WM_DEVICECHANGE_WPPARAMS.DBT_DEVICEARRIVAL
+                        Dim Authentication As New Authentication
+                        Authentication.Show()
+                    Case WM_DEVICECHANGE_WPPARAMS.DBT_DEVICEREMOVECOMPLETE
+                        UnblockUSBPort()
+                    Case WM_DEVICECHANGE_WPPARAMS.DBT_CONFIGCHANGED
+                        UnblockUSBPort()
 
-            Select Case m.WParam
-                Case WM_DEVICECHANGE_WPPARAMS.DBT_DEVICEARRIVAL
-                    Dim Authentication As New Authentication
-                    Authentication.Show()
-                Case WM_DEVICECHANGE_WPPARAMS.DBT_DEVICEREMOVECOMPLETE
-                    UnblockUSBPort()
-                Case WM_DEVICECHANGE_WPPARAMS.DBT_CONFIGCHANGED
-                    UnblockUSBPort()
-
-            End Select
+                End Select
+            End If
         End If
-
         MyBase.WndProc(m)
     End Sub
 
@@ -77,6 +78,7 @@ Public Class LoginForm
             statusText.Text = "Status : Active"
         Else
             statusText.Text = "Status : Not Active"
+            UnblockUSBPort()
         End If
     End Sub
 
