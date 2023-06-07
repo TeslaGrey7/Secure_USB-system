@@ -4,6 +4,9 @@ Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports Microsoft.Win32
 Imports System.Runtime.InteropServices
+Imports System.Text.Json
+Imports System.Collections.Specialized
+
 Public Class LoginForm
 
     Private Const WM_DEVICECHANGE As Integer = &H219
@@ -37,25 +40,37 @@ Public Class LoginForm
         Dim enabled As Boolean = My.Settings.enabled
         If enabled = True Then
             If m.Msg = WM_DEVICECHANGE Then
-
                 Select Case m.WParam
                     Case WM_DEVICECHANGE_WPPARAMS.DBT_DEVICEARRIVAL
                         Dim Authentication As New Authentication
                         Authentication.Show()
+                        saveLogs("USB", "Insert Detected")
                     Case WM_DEVICECHANGE_WPPARAMS.DBT_DEVICEREMOVECOMPLETE
                         UnblockUSBPort()
+                        saveLogs("USB", "Removal Detected")
                     Case WM_DEVICECHANGE_WPPARAMS.DBT_CONFIGCHANGED
                         UnblockUSBPort()
-
+                        saveLogs("USB", "Removal Detected")
                 End Select
             End If
         End If
         MyBase.WndProc(m)
     End Sub
 
+
+    Private Sub saveLogs(port As String, status As String)
+        Dim logs As New StringCollection
+        logs = My.Settings.logs
+        Dim time As DateTime = DateTime.Now
+        Dim format As String = "ddd MMM d yyyy HH:mm:ss "
+        logs.Insert(1, "Port: " + port + " | Time : " + time.ToString(format) + " | Status: " + status)
+        My.Settings.logs = logs
+        My.Settings.Save()
+    End Sub
+
+
     Private Sub LoginForm_Activated(sender As Object, e As EventArgs) Handles MyBase.Load
         checkUserSettings()
-        ' hereeee
         '  BlockUSBPort()
         UnblockUSBPort()
     End Sub
@@ -82,7 +97,7 @@ Public Class LoginForm
         End If
     End Sub
 
-    
+
 
     Private Sub passwordInput_TextChanged(sender As Object, e As EventArgs) Handles passwordInput.TextChanged
         passwordInput.PasswordChar = "*"

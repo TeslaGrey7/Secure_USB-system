@@ -1,8 +1,10 @@
-﻿Public Class Dashboard
+﻿Imports System.Collections.Specialized
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 
-
+Public Class Dashboard
     Private Sub Dashboard_Activated(sender As Object, e As EventArgs) Handles MyBase.Load
         getUserSettings()
+        populateLogs()
     End Sub
     Private Sub getUserSettings()
         Dim username As String = My.Settings.username
@@ -13,6 +15,14 @@
         passwordInput.Text = password
         pincodeInput.Text = pincode
         enabledInput.Checked = enabled
+    End Sub
+
+    Private Sub populateLogs()
+        Dim logs As New StringCollection
+        logs = My.Settings.logs
+        For Each log As String In logs
+            Me.logsTable.Items.Add(log)
+        Next log
     End Sub
 
     Private Sub saveUserSettings()
@@ -64,4 +74,6 @@
 
 
     End Sub
+
+
 End Class

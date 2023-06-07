@@ -40,6 +40,8 @@ Partial Class Dashboard
         pincodeInput = New TextBox()
         enabledInput = New CheckBox()
         authenticationBackgroundWorker = New ComponentModel.BackgroundWorker()
+        Label10 = New Label()
+        logsTable = New ListBox()
         SuspendLayout()
         ' 
         ' credentialsLabel
@@ -56,7 +58,7 @@ Partial Class Dashboard
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point)
-        Label1.Location = New Point(519, 35)
+        Label1.Location = New Point(472, 35)
         Label1.Name = "Label1"
         Label1.Size = New Size(214, 38)
         Label1.TabIndex = 8
@@ -64,7 +66,7 @@ Partial Class Dashboard
         ' 
         ' saveSettings
         ' 
-        saveSettings.Location = New Point(354, 381)
+        saveSettings.Location = New Point(342, 648)
         saveSettings.Name = "saveSettings"
         saveSettings.Size = New Size(174, 34)
         saveSettings.TabIndex = 9
@@ -73,7 +75,7 @@ Partial Class Dashboard
         ' 
         ' exitBtn
         ' 
-        exitBtn.Location = New Point(587, 381)
+        exitBtn.Location = New Point(571, 648)
         exitBtn.Name = "exitBtn"
         exitBtn.Size = New Size(174, 34)
         exitBtn.TabIndex = 10
@@ -163,7 +165,7 @@ Partial Class Dashboard
         ' Label9
         ' 
         Label9.AutoSize = True
-        Label9.Location = New Point(502, 105)
+        Label9.Location = New Point(472, 103)
         Label9.Name = "Label9"
         Label9.Size = New Size(40, 25)
         Label9.TabIndex = 20
@@ -171,7 +173,7 @@ Partial Class Dashboard
         ' 
         ' pincodeInput
         ' 
-        pincodeInput.Location = New Point(571, 103)
+        pincodeInput.Location = New Point(522, 99)
         pincodeInput.Name = "pincodeInput"
         pincodeInput.Size = New Size(150, 31)
         pincodeInput.TabIndex = 21
@@ -179,7 +181,7 @@ Partial Class Dashboard
         ' enabledInput
         ' 
         enabledInput.AutoSize = True
-        enabledInput.Location = New Point(571, 160)
+        enabledInput.Location = New Point(522, 160)
         enabledInput.Name = "enabledInput"
         enabledInput.Size = New Size(101, 29)
         enabledInput.TabIndex = 22
@@ -189,11 +191,33 @@ Partial Class Dashboard
         ' authenticationBackgroundWorker
         ' 
         ' 
+        ' Label10
+        ' 
+        Label10.AutoSize = True
+        Label10.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point)
+        Label10.Location = New Point(472, 247)
+        Label10.Name = "Label10"
+        Label10.Size = New Size(170, 38)
+        Label10.TabIndex = 23
+        Label10.Text = "Access Logs"
+        ' 
+        ' logsTable
+        ' 
+        logsTable.FormattingEnabled = True
+        logsTable.HorizontalScrollbar = True
+        logsTable.ItemHeight = 25
+        logsTable.Location = New Point(342, 310)
+        logsTable.Name = "logsTable"
+        logsTable.Size = New Size(403, 304)
+        logsTable.TabIndex = 24
+        ' 
         ' Dashboard
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 450)
+        ClientSize = New Size(812, 696)
+        Controls.Add(logsTable)
+        Controls.Add(Label10)
         Controls.Add(enabledInput)
         Controls.Add(pincodeInput)
         Controls.Add(Label9)
@@ -234,4 +258,6 @@ Partial Class Dashboard
     Friend WithEvents pincodeInput As TextBox
     Friend WithEvents enabledInput As CheckBox
     Friend WithEvents authenticationBackgroundWorker As System.ComponentModel.BackgroundWorker
+    Friend WithEvents Label10 As Label
+    Friend WithEvents logsTable As ListBox
 End Class
