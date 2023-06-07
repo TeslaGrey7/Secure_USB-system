@@ -8,13 +8,17 @@ Public Class Dashboard
     End Sub
     Private Sub getUserSettings()
         Dim username As String = My.Settings.username
+        Dim email As String = My.Settings.email
         Dim password As String = My.Settings.password
         Dim pincode As String = My.Settings.pincode
         Dim enabled As Boolean = My.Settings.enabled
+        Dim emailEnabled As Boolean = My.Settings.emailEnabled
         usernameInput.Text = username
+        emailInput.Text = email
         passwordInput.Text = password
         pincodeInput.Text = pincode
         enabledInput.Checked = enabled
+        emailEnabledBox.Checked = emailEnabled
     End Sub
 
     Private Sub populateLogs()
@@ -27,16 +31,22 @@ Public Class Dashboard
 
     Private Sub saveUserSettings()
         Dim username As String = usernameInput.Text()
+        Dim email As String = emailInput.Text()
         Dim password As String = passwordInput.Text()
         Dim pincode As String = pincodeInput.Text()
         Dim enabled As Boolean = enabledInput.Checked()
+        Dim emailEnabled As Boolean = emailEnabledBox.Checked()
         If enabled = True And Strings.Trim(pincode).Length() < 1 Then
             MessageBox.Show("Pincode cannot be empty if Authentication enabled!")
+        ElseIf emailEnabled = True And Strings.Trim(email).Length() < 1 Then
+            MessageBox.Show("Email cannot be empty if Notification enabled!")
         Else
-            My.Settings.username = username
+                My.Settings.username = username
+            My.Settings.email = email
             My.Settings.password = password
             My.Settings.pincode = pincode
             My.Settings.enabled = enabled
+            My.Settings.emailEnabled = emailEnabled
             My.Settings.Save()
             MessageBox.Show("Settings saved!")
             getUserSettings()

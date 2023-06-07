@@ -42,6 +42,9 @@ Partial Class Dashboard
         authenticationBackgroundWorker = New ComponentModel.BackgroundWorker()
         Label10 = New Label()
         logsTable = New ListBox()
+        Label11 = New Label()
+        emailInput = New TextBox()
+        emailEnabledBox = New CheckBox()
         SuspendLayout()
         ' 
         ' credentialsLabel
@@ -211,11 +214,40 @@ Partial Class Dashboard
         logsTable.Size = New Size(403, 304)
         logsTable.TabIndex = 24
         ' 
+        ' Label11
+        ' 
+        Label11.AutoSize = True
+        Label11.Location = New Point(16, 211)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(61, 25)
+        Label11.TabIndex = 25
+        Label11.Text = "E-mail"
+        ' 
+        ' emailInput
+        ' 
+        emailInput.Location = New Point(126, 213)
+        emailInput.Name = "emailInput"
+        emailInput.Size = New Size(150, 31)
+        emailInput.TabIndex = 26
+        ' 
+        ' emailEnabledBox
+        ' 
+        emailEnabledBox.AutoSize = True
+        emailEnabledBox.Location = New Point(282, 215)
+        emailEnabledBox.Name = "emailEnabledBox"
+        emailEnabledBox.Size = New Size(175, 29)
+        emailEnabledBox.TabIndex = 27
+        emailEnabledBox.Text = "Send Notification"
+        emailEnabledBox.UseVisualStyleBackColor = True
+        ' 
         ' Dashboard
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(812, 696)
+        Controls.Add(emailEnabledBox)
+        Controls.Add(emailInput)
+        Controls.Add(Label11)
         Controls.Add(logsTable)
         Controls.Add(Label10)
         Controls.Add(enabledInput)
@@ -260,4 +292,7 @@ Partial Class Dashboard
     Friend WithEvents authenticationBackgroundWorker As System.ComponentModel.BackgroundWorker
     Friend WithEvents Label10 As Label
     Friend WithEvents logsTable As ListBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents emailInput As TextBox
+    Friend WithEvents emailEnabledBox As CheckBox
 End Class
